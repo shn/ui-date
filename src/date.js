@@ -45,6 +45,7 @@ angular.module('ui.date', [])
           opts.onClose = function(value, picker) {
             showing = false;
           };
+          element.off('blur');
           element.on('blur', function() {
             if ( !showing ) {
               scope.$apply(function() {
